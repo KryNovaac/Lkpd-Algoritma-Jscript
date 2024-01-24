@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Grade</title>
+  <link rel="stylesheet" href="rey.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Menghitung Gaji</h1>
+    <input type="number" id="jam-lembur" name="jam_lembur" placeholder="Jam lembur">
+    <button onclick="hitungGajiLembur()">Hitung</button>
+    <div id="hasil" class="id"></div>
+  </div>
+  <script> 
+    function hitungGajiLembur() {
+      var jamLembur = parseFloat(document.getElementById('jam-lembur').value);
+      var gajiLembur;
+
+      if (jamLembur >= 1 && jamLembur <= 5) {
+        gajiLembur = 100000;
+      } else if (jamLembur == 6 ) {
+        gajiLembur = 200000;
+      } else if (jamLembur > 6 ) {
+        gajiLembur = 300000;
+      } else {
+        gajiLembur = '0, (MangEakk)';
+      }
+       document.getElementById('hasil').innerText = 'Gaji Lembur : Rp.' + gajiLembur;
+    }
+  </script>
+</body>
+</html>

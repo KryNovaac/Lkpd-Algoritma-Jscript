@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kalkulator Grade</title>
+        <link rel="stylesheet" href="rey.css">
+</head>
+<body>
+  <header class="header">
+   <img class="logo" src="img/kry+logo.png">
+    <nav class="navbar">
+      <div class="hamburger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+      <div class="sidebar">
+       </div>
+        <ul class="nav-links">
+            <li>
+              <a href="#satu" class="active">Home</a>
+              <a href="#container">About-me</a>
+              <a href="#container">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+  </header>
+
+  <div class="satu">
+    <div class="container">
+      <h1>Menghitung Range</h1>
+      <input type="nomer" id="nilai-1" placeholder="Nilai 1">
+      <input type="nomer" id="nilai-2" placeholder="Nilai 2">
+      <input type="nomer" id="nilai-3" placeholder="Nilai 3">
+      <input type="nomer" id="nilai-4" placeholder="Nilai 4">
+      <input type="nomer" id="nilai-5" placeholder="Nilai 5">
+      <button onclick="hitungGrade()">Hitung</button>
+      <div class="hasil" id="hasil"></div>
+    </div>
+  </div>
+
+<script>
+  function hitungGrade() {
+    var nilai1 = parseFloat(document.getElementById('nilai-1').value);
+    var nilai2 = parseFloat(document.getElementById('nilai-2').value);
+    var nilai3 = parseFloat(document.getElementById('nilai-3').value);
+    var nilai4 = parseFloat(document.getElementById('nilai-4').value);
+    var nilai5 = parseFloat(document.getElementById('nilai-5').value);
+    var total = nilai1 + nilai2 + nilai3 + nilai4 + nilai5;
+    var rataRata = total / 5;
+    var grade;
+
+    if (rataRata > 90 && rataRata <= 100) {
+      grade = 'S';
+    } else if ( rataRata > 75 && rataRata <= 90) {
+      grade = 'A';
+    } else if ( rataRata > 60 && rataRata <=75) {
+      grade = 'B'
+    } else if ( rataRata > 50 && rataRata <=60) {
+      grade = 'C';
+    } else if ( rataRata >= 0 && rataRata <= 50) {
+      grade = 'D';
+    } else {
+      grade = 'Nilai diluar nalar';
+    }
+
+    document.getElementById('hasil').innerText = 'Rata-rata: ' + rataRata.toFixed(2) + ', Grade:' + grade;
+  }
+</script>
+</body>
+</html>

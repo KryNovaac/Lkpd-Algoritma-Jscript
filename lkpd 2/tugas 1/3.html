@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function konversiDetik(totalDetik) {
+    var jam = Math.floor(totalDetik / 3600);
+    totalDetik %= 3600;
+    var menit = Math.floor(totalDetik / 60);
+    var detik = totalDetik % 60;
+
+    console.log(jam + " jam " + menit + " menit " + detik + " detik");
+}
+
+konversiDetik(5440);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lkpd-4,2</title>
+</head>
+<body>
+    <script>
+        function gtauPusing(kode) {
+    var golongan = kode[0];
+    var tanggal = kode.substring(1, 3);
+    var bulan = kode.substring(3, 5);
+    var tahun = kode.substring(5, 9);
+    var nomorUrut = kode.substring(9, 11);
+
+    var bulanNama;
+    switch(bulan) {
+        case '01': bulanNama = 'Januari'; break;
+        case '02': bulanNama = 'Februari'; break;
+        case '03': bulanNama = 'Maret'; break;
+        case '04': bulanNama = 'April'; break;
+        case '05': bulanNama = 'Mei'; break;
+        case '06': bulanNama = 'Juni'; break;
+        case '07': bulanNama = 'Juli'; break;
+        case '08': bulanNama = 'Agustus'; break;
+        case '09': bulanNama = 'September'; break;
+        case '10': bulanNama = 'Oktober'; break;
+        case '11': bulanNama = 'November'; break;
+        case '12': bulanNama = 'Desember'; break;
+    }
+
+    console.log("Golongan: " + golongan);
+    console.log("Tanggal Lahir: " + tanggal + " " + bulanNama + " " + tahun);
+    console.log("Nomor Urut: " + nomorUrut);
+}
+
+gtauPusing("31505200801"); 
+
+    </script>
+</body>
+</html>

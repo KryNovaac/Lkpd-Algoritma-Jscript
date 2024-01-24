@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kalkulator Grade</title>
+        <link rel="stylesheet" href="rey.css">
+</head>
+<body>
+ 
+  <div class="container">
+    <h1>Penerimaan Siswa Baru</h1>
+    <input type="text" class="nilai-1" placeholder="Nama">
+    <input type="nomer" id="nilai-2" placeholder="Nilai UN">
+    <input type="text" class="jalur" placeholder="Jalur">
+    <button onclick="p()">Hitung</button>
+    <button onclick="p()">COBA</button>
+    <div class="hasil" id="hasil"></div>
+  </div>
+  
+  <script>
+  function p() {
+    const namaSiswa = document.getElementsByClassName('nilai-1')[0].value;
+    var nilai2 = parseFloat(document.getElementById('nilai-2').value);
+    const jalur = document.getElementsByClassName('jalur')[0].value;
+    var grade;
+  
+    if (nilai2 >= 90 && nilai2 <= 100) {
+      grade = 'nilai sempurna, lolos';
+    } else if (nilai2 >= 75 && nilai2 <= 89) {
+      if ( jalur == 'Raport') {
+        grade = ' Lolos, Jalur Raport'
+      }
+      else if ( jalur == 'Prestasi' ) {
+        grade = 'Lolos, Jalur Prestasi'
+      }
+      else {
+        grade = 'Silahkan ikut tes mandiri'
+      }
+    } else {
+      grade = 'Silahkan ikut tes mandiri';
+    }
+  
+    document.getElementById('hasil').innerText = 'Siswa bernama ' + namaSiswa + ', keterangan : ' + grade;
+  }
+  </script>
+
+  <script>
+  let Nama = "rey";
+  let nilai2 = 71;
+  let jalur = "Belakang";
+  var grade
+
+  if (nilai2 >= 90 && nilai2 <= 100) {
+      grade = 'nilai sempurna, lolos';
+    } else if ( nilai2 => 75 && nilai2 <= 89) {
+      if ( jalur == 'Prestasi') {
+        grade = 'Lolos, jalur Prestasi'
+      }
+      else if ( jalur == 'Raport') {
+        grade = 'Lolos, jalur Raport'
+      } 
+      else {
+        grade='silahkan ikut tes mandiri'
+      }
+    }  else {
+      grade = 'Silahkan ikut tes mandiri';
+    }
+
+    console.log (Nama + ' dengan keterangan : ' + grade)
+
+</script>   
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ngitungBil(bil) {
+            var jumlah = 0;
+            var terbesar = bil[0];
+            var terkecil = bil[0];
+            
+            for (var i = 0; i < bil.length; i++) {
+                jumlah += bil[i];
+                if (bil[i] > terbesar) {
+                    terbesar = bil[i];
+                } if (bil[i] < terkecil) { 
+                    terkecil = bilangan[i];
+                }
+            } 
+            var rata2 = jumlah / bil.length;
+            console.log("Bilangan Terbesar: " + terbesar);
+            console.log("Bilangan Terkecil: " + terkecil);
+            console.log("Rata-Rata: " + rata2);
+}
+
+ngitungBil([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
+
+    </script>
+</body>
+</html>

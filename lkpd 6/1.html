@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.1</title>
+</head>
+<body>
+    <script>
+        function cariJuara (siswa) {
+            var juara = null;
+            
+            for (var i = 0; i < siswa.length; i++) {
+                var nilaiTotal = siswa[i].nilai.MTK + siswa[i].nilai.INDO + siswa[i].nilai.INGG + siswa[i].nilai.DPK + siswa[i].nilai.Agama;
+                var rataRata = nilaiTotal /5;
+                if (rataRata >= 95 && siswa[i].kehadiran === '100%') {
+            if (juara === null || rataRata > juara.rataRata) {
+                juara = {
+                    nama: siswa[i].nama,
+                    rataRata: rataRata
+                };
+            }
+        }
+    }
+
+    if (juara !== null) {
+        console.log("Juara kelas adalah " + juara.nama + " dengan rata-rata nilai " + juara.rataRata);
+    } else {
+        console.log("Tidak ada siswa yang memenuhi kriteria juara kelas.");
+    }
+}
+
+// siswa nbyaaaaa
+var siswa = [
+    { nama: '1', nilai: { MTK: 95, INDO: 90, INGG: 85, DPK: 80, Agama: 75 }, kehadiran: '100%' },
+    { nama: '2', nilai: { MTK: 95, INDO: 90, INGG: 85, DPK: 80, Agama: 75 }, kehadiran: '100%' },
+    { nama: '3', nilai: { MTK: 95, INDO: 90, INGG: 85, DPK: 80, Agama: 75 }, kehadiran: '100%' },
+    { nama: '4', nilai: { MTK: 95, INDO: 90, INGG: 85, DPK: 80, Agama: 75 }, kehadiran: '100%' },
+    { nama: '5', nilai: { MTK: 95, INDO: 90, INGG: 85, DPK: 80, Agama: 75 }, kehadiran: '100%' },
+    { nama: '6', nilai: { MTK: 95, INDO: 90, INGG: 85, DPK: 80, Agama: 75 }, kehadiran: '100%' },
+    { nama: '7', nilai: { MTK: 95, INDO: 90, INGG: 85, DPK: 80, Agama: 75 }, kehadiran: '100%' },
+    { nama: '8', nilai: { MTK: 95, INDO: 90, INGG: 85, DPK: 80, Agama: 75 }, kehadiran: '100%' },
+    { nama: '9', nilai: { MTK: 100, INDO: 100, INGG: 100, DPK: 100, Agama: 100 }, kehadiran: '100%' },
+    { nama: '10', nilai: { MTK: 95, INDO: 90, INGG: 85, DPK: 80, Agama: 75 }, kehadiran: '100%' },
+    { nama: '11', nilai: { MTK: 95, INDO: 90, INGG: 85, DPK: 80, Agama: 75 }, kehadiran: '100%' },
+    { nama: '12', nilai: { MTK: 95, INDO: 90, INGG: 85, DPK: 80, Agama: 75 }, kehadiran: '100%' },
+    { nama: '13', nilai: { MTK: 95, INDO: 90, INGG: 85, DPK: 80, Agama: 75 }, kehadiran: '100%' },
+    { nama: '14', nilai: { MTK: 95, INDO: 90, INGG: 85, DPK: 80, Agama: 75 }, kehadiran: '100%' },
+    { nama: '15', nilai: { MTK: 95, INDO: 90, INGG: 85, DPK: 80, Agama: 75 }, kehadiran: '100%' },
+];
+
+cariJuara(siswa);
+    </script>
+</body>
+</html>

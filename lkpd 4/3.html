@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lkpd-4,3
+    </title>
+</head>
+<body>
+    <script>
+        function tambahDetik(jam, menit, detik) {
+    detik++;
+    if (detik >= 60) {
+        detik = 0;
+        menit++;
+        if (menit >= 60) {
+            menit = 0;
+            jam++;
+            if (jam >= 24) {
+                jam = 0;
+            }
+        }
+    }
+
+    console.log("Waktu setelah ditambah 1 detik: " + jam + ":" + menit + ":" + detik);
+}
+
+tambahDetik(23, 59, 59); 
+
+    </script>
+</body>
+</html>

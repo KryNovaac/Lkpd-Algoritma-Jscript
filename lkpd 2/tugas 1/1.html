@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lkpd 2
+    </title>
+</head>
+<body>
+    <script>
+        function hitungGaji(nama, gajiPokok) {
+    var tunjangan = 0.20 * gajiPokok;
+    var pajak = 0.15 * (gajiPokok + tunjangan);
+    var gajiBersih = gajiPokok + tunjangan - pajak;
+
+    console.log("Nama Karyawan: " + nama);
+    console.log("Tunjangan: " + tunjangan);
+    console.log("Pajak: " + pajak);
+    console.log("Gaji Bersih: " + gajiBersih);
+}
+
+hitungGaji("Budi", 5000000);
+
+    </script>
+</body>
+</html>

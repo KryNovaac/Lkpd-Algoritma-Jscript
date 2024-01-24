@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hitungHarga(berat) {
+    var hargaPerKg = 500 * 10; 
+    var totalHargaSebelumDiskon = berat * hargaPerKg;
+    var diskon = 0.05 * totalHargaSebelumDiskon;
+    var totalHargaSetelahDiskon = totalHargaSebelumDiskon - diskon;
+
+    console.log("Total Harga Sebelum Diskon: " + totalHargaSebelumDiskon + " Rupiah");
+    console.log("Diskon: " + diskon + " Rupiah");
+    console.log("Total Harga Setelah Diskon: " + totalHargaSetelahDiskon + " Rupiah");
+}
+
+hitungHarga(2); 
+hitungHarga(4); 
+hitungHarga(8); 
+
+
+
+    </script>
+</body>
+</html>

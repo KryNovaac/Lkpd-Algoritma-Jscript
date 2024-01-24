@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function cara(bilangan) {
+    var satuan = bilangan % 10;
+    var puluhan = Math.floor((bilangan % 100) / 10);
+    var ratusan = Math.floor((bilangan % 1000) / 100);
+
+    console.log(`satuan:${satuan}, Puluhan:${puluhan}, Puluhan:${ratusan}`);
+}
+
+cara(1234567); 
+
+    </script>
+</body>
+</html>

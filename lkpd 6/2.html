@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.2</title>
+</head>
+<body>
+    <script>
+    const jumlahTiketVIP = 40;
+    const jumlahTiketEksekutif = 30;
+    const jumlahTiketEkonomi = 50;
+    const hargaTiketVIP = 50000;
+    const hargaTiketEksekutif = 30000;
+    const hargaTiketEkonomi = 20000;
+    
+    let keuntunganVIP = 0;
+    if (jumlahTiketVIP >= 35) {
+        keuntunganVIP = 0.25 * hargaTiketVIP * jumlahTiketVIP;
+    } else if (jumlahTiketVIP >= 20) {
+        keuntunganVIP = 0.15 * hargaTiketVIP * jumlahTiketVIP;
+    } else {
+        keuntunganVIP = 0.05 * hargaTiketVIP * jumlahTiketVIP;
+    }
+    
+    let keuntunganEksekutif = 0;
+    if (jumlahTiketEksekutif >= 40) {
+        keuntunganEksekutif = 0.2 * hargaTiketEksekutif * jumlahTiketEksekutif;
+    } else if (jumlahTiketEksekutif >= 20) {
+        keuntunganEksekutif = 0.1 * hargaTiketEksekutif * jumlahTiketEksekutif;
+    } else {
+        keuntunganEksekutif = 0.02 * hargaTiketEksekutif * jumlahTiketEksekutif;
+    } 
+    const keuntunganEkonomi = 0.07 * hargaTiketEkonomi * jumlahTiketEkonomi;
+    const keuntunganTotal = keuntunganVIP + keuntunganEksekutif + keuntunganEkonomi;
+
+    console.log(`Keuntungan per kelas tiket:`);
+    console.log(`VIP: ${keuntunganVIP}`);
+    console.log(`Eksekutif: ${keuntunganEksekutif}`);
+    console.log(`Ekonomi: ${keuntunganEkonomi}`);
+    console.log(`Keuntungan secara keseluruhan: ${keuntunganTotal}`);
+    console.log(`Jumlah tiket per kelas dan total tiket:`);
+    console.log(`VIP: ${jumlahTiketVIP} (total tiket: ${jumlahTiketVIP + jumlahTiketEksekutif + jumlahTiketEkonomi})`);
+    console.log(`Eksekutif: ${jumlahTiketEksekutif}`);
+    console.log(`Ekonomi: ${jumlahTiketEkonomi}`);
+    </script>
+</body>
+</html>
